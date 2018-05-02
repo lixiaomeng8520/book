@@ -1,4 +1,4 @@
-# linux命令
+# 命令详解
 
 ## nmcli
 
@@ -53,7 +53,7 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | --- | --- | --- | --- |
 | 生成密钥 | ssh-keygen -t rsa |
 | 拷贝公钥 | ssh-copy-id root@master |
-|  |  ssh-copy-id -i ~/.ssh/id\_rsa.pub root@master |
+|  | ssh-copy-id -i ~/.ssh/id\_rsa.pub root@master |
 
 ## rpm
 
@@ -64,3 +64,4 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | 查看php71u包信息 | rpm -qi php71u-fpm |
 | 列出php71u包含的文件 | rpm -ql php71u-fpm |
 | 查看filename属于哪个rpm包 | rpm -qf filename |
+
