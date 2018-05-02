@@ -29,7 +29,7 @@
 
 ```bash
 # 安装dnsmasq
-yum install dnsmasq
+yum -y install dnsmasq
 ```
 
 ```bash
@@ -62,7 +62,7 @@ systemctl enable dnsmasq
 
 ```bash
 # 安装syslinux
-yum install syslinux
+yum -y install syslinux
 
 # 将syslinux文件复制到tftp根目录下
 cp -r /usr/share/syslinux/* /var/tftp/
@@ -106,7 +106,7 @@ cp /mnt/images/pxeboot/initrd.img /var/tftp/centos7/
 #### 安装vsftp，用于提供包下载
 
 ```bash
-yum install vsftpd
+yum -y install vsftpd
 cp -r /mnt/* /var/ftp/pub
 systemctl start vsftpd
 systemctl enable vsftpd
