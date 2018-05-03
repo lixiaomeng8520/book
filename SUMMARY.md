@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [BOOK](README.md)
 * [linux命令](linux-ming-ling.md)
 * 基础
   * [基础知识](ji-chu/ji-chu-zhi-shi.md)
