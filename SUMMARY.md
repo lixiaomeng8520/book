@@ -11,4 +11,8 @@
   * systemd
   * samba
   * firewalld
+* 编辑器
+  * [vim](bian-ji-qi/vim.md)
+  * sublime
+  * vscode
 
