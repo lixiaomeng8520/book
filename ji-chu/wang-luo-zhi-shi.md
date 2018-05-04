@@ -41,6 +41,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward # 开启路由转发
 4. 路由主机需要开启转发, echo 1 &gt; /proc/sys/net/ipv4/ip\_forward.
 5. virtualbox可以采用nat + hostonly模式, nat用来上网, hostonly用来构建内部网络.
 6. centos按照顺序加载网卡配置文件, 所以先配置nat后配置hostonly的话，hostonly不要写网关, 否则会覆盖掉nat.
+7. 虚拟机无法ping通windows宿主机的话，将防火墙-&gt;高级设置-&gt;入站规则-&gt;文件和打印机共享\(回显请求 - ICMPv4-In\)改为启用、允许连接。
 
 ## DHCP
 
