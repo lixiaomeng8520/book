@@ -1,5 +1,9 @@
 # 命令详解
 
+## 参考
+
+1. [linux命令大全](http://www.runoob.com/linux/linux-command-manual.html)
+
 ## nmcli
 
 | 描述 | 命令 |
