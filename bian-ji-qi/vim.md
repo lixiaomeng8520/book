@@ -28,3 +28,7 @@ set encoding=utf-8 #设置默认编码
 
 ![](../.gitbook/assets/qu-kuai-xuan-ze-de-an-jian-yi-yi.png)
 
+![](../.gitbook/assets/duo-chuang-kou-qing-kuang-xia-de-an-jian-gong-neng.png)
+
+![](../.gitbook/assets/duo-dang-an-bian-ji-de-an-jian.png)
+
