@@ -7,4 +7,5 @@
   * [安装操作系统](ji-chu/an-zhuang-cao-zuo-xi-tong.md)
   * [命令详解](ji-chu/ming-ling-xiang-jie.md)
   * [网络知识](ji-chu/wang-luo-zhi-shi.md)
+  * [代码规范](ji-chu/dai-ma-gui-fan.md)
 
