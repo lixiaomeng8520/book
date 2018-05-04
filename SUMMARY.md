@@ -8,7 +8,7 @@
   * [网络知识](ji-chu/wang-luo-zhi-shi.md)
   * [代码规范](ji-chu/dai-ma-gui-fan.md)
 * 服务
-  * systemd
+  * [systemd](fu-wu/systemd.md)
   * samba
   * firewalld
 * 编辑器
