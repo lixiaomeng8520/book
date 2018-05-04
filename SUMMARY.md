@@ -9,6 +9,10 @@
   * [代码规范](ji-chu/dai-ma-gui-fan.md)
 * 服务
   * [systemd](fu-wu/systemd.md)
+  * firewalld
+  * samba
+* 服务
+  * [systemd](fu-wu/systemd%20%281%29.md)
   * samba
   * firewalld
 * 编辑器
