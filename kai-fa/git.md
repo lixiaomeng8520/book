@@ -16,9 +16,9 @@ yum -y install connect-proxy
 # ~/.ssh/config
 
 Host github.com *.github.com
-ProxyCommand connect-proxy -H 192.168.56.1:1080 %h %p
-IdentityFile ~/.ssh/id_rsa
-User git
+    ProxyCommand connect-proxy -H 192.168.56.1:1080 %h %p
+    IdentityFile ~/.ssh/id_rsa
+    User git
 ```
 
 
