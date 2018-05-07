@@ -23,8 +23,6 @@ netfilter通过以下方式对数据包进行分类：
 
 ## 表和链
 
-### 表
-
 * filter：用以对数据进行过滤。
 
 {% hint style="info" %}
