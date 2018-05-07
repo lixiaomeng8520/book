@@ -1,5 +1,9 @@
 # iptables
 
+## 参考
+
+ [linux平台下防火墙iptables原理\(转\)](http://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646466.html)
+
 ## netfilter
 
 linux内核通过netfilter模块实现网络访问控制功能，在用户层可以通过iptables程序对netfilter进行管理。
@@ -20,6 +24,8 @@ netfilter通过以下方式对数据包进行分类：
 ## 数据包流向
 
 ![](../.gitbook/assets/qq-jie-tu-20180507160859.png)
+
+![](../.gitbook/assets/2012081915413532.png)
 
 ## 表和链
 
