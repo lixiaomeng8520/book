@@ -11,6 +11,8 @@
   * [systemd](fu-wu/systemd.md)
   * firewalld
   * samba
+* 开发
+  * [git](kai-fa/git.md)
 * 编辑器
   * [vim](bian-ji-qi/vim.md)
   * sublime
