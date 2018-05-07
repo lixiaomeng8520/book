@@ -11,6 +11,7 @@
   * [systemd](fu-wu/systemd.md)
   * firewalld
   * samba
+  * [iptables](fu-wu/iptables.md)
 * 开发
   * [git](kai-fa/git.md)
 * 编辑器
