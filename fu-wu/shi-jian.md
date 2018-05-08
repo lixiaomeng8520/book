@@ -1,6 +1,8 @@
 # 时间
 
-使用 timedatectl 来统一管理时间，如果设置 ntp 同步，他会调用 ntp 或 chrony 来进行同步
+## timedatectl
+
+使用 timedatectl 来统一管理时间，他是systemd的一部分，如果设置 ntp 同步，他会调用 ntp 或 chrony 来进行同步
 
 ```bash
 # 当前时间状态
