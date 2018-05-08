@@ -9,8 +9,8 @@
   * [代码规范](ji-chu/dai-ma-gui-fan.md)
 * 服务
   * [systemd](fu-wu/systemd.md)
-  * firewalld
   * samba
+  * firewalld
   * [iptables](fu-wu/iptables.md)
 * 开发
   * [git](kai-fa/git.md)
