@@ -9,7 +9,7 @@
   * [代码规范](ji-chu/dai-ma-gui-fan.md)
 * 服务
   * [systemd](fu-wu/systemd.md)
-  * samba
+  * [samba](fu-wu/samba.md)
   * firewalld
   * [iptables](fu-wu/iptables.md)
   * [时间](fu-wu/shi-jian.md)
