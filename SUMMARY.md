@@ -10,7 +10,7 @@
 * 服务
   * [systemd](fu-wu/systemd.md)
   * [samba](fu-wu/samba.md)
-  * firewalld
+  * [firewalld](fu-wu/firewalld.md)
   * [iptables](fu-wu/iptables.md)
   * [时间](fu-wu/shi-jian.md)
 * 开发
