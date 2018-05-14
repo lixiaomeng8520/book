@@ -13,26 +13,28 @@
 {% tabs %}
 {% tab title="centos" %}
 ```bash
+vim /etc/yum.repos.d/centos.repo
+
 [base]
-name=centos - base
+name=CentOS-$releasever - Base
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
-enable=1
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 
 #released updates
 [updates]
-name=centos - updates
+name=CentOS-$releasever - Updates
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/updates/$basearch/
-enable=1
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 
 #additional packages that may be useful
 [extras]
-name=centos - extras
+name=CentOS-$releasever - Extras
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch/
-enable=1
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 ```
@@ -40,6 +42,8 @@ gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 
 {% tab title="epel" %}
 ```bash
+vim /etc/yum.repos.d/epel.repo
+
 [epel]
 name=epel
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/epel/7/$basearch
@@ -51,6 +55,8 @@ gpgkey=https://mirrors.tuna.tsinghua.edu.cn/epel/RPM-GPG-KEY-EPEL-7
 
 {% tab title="ius" %}
 ```bash
+vim /etc/yum.repos.d/ius.repo
+
 [ius - stable]
 name=ius - stable
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/ius/stable/CentOS/7/$basearch
