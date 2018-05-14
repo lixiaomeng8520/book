@@ -13,8 +13,7 @@
 {% tabs %}
 {% tab title="centos" %}
 ```bash
-vim /etc/yum.repos.d/centos.repo
-
+cat > /etc/yum.repos.d/centos.repo <<EOF
 [base]
 name=CentOS-$releasever - Base
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
@@ -37,25 +36,26 @@ baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch
 #mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
+EOF
 ```
 {% endtab %}
 
 {% tab title="epel" %}
 ```bash
-vim /etc/yum.repos.d/epel.repo
-
+cat > /etc/yum.repos.d/epel.repo <<EOF
 [epel]
 name=epel
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/epel/7/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/epel/RPM-GPG-KEY-EPEL-7
+EOF
 ```
 {% endtab %}
 
 {% tab title="ius" %}
 ```bash
-vim /etc/yum.repos.d/ius.repo
+cat > /etc/yum.repos.d/ius.repo <<EOF
 
 [ius-stable]
 name=ius - stable
@@ -63,12 +63,13 @@ baseurl=https://mirrors.tuna.tsinghua.edu.cn/ius/stable/CentOS/7/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/ius/IUS-COMMUNITY-GPG-KEY
+EOF
 ```
 {% endtab %}
 
 {% tab title="docker" %}
 ```bash
-vim /etc/yum.repos.d/docker.repo
+cat > /etc/yum.repos.d/docker.repo <<EOF
 
 [docker-ce-stable]
 name=Docker CE Stable - $basearch
@@ -76,6 +77,7 @@ baseurl=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/7/$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/gpg
+EOF
 ```
 {% endtab %}
 {% endtabs %}
