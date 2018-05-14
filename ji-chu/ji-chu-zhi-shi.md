@@ -65,6 +65,19 @@ gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/ius/IUS-COMMUNITY-GPG-KEY
 ```
 {% endtab %}
+
+{% tab title="docker" %}
+```bash
+vim /etc/yum.repos.d/docker.repo
+
+[docker-ce-stable]
+name=Docker CE Stable - $basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/7/$basearch/stable
+enabled=1
+gpgcheck=1
+gpgkey=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/gpg
+```
+{% endtab %}
 {% endtabs %}
 
 ## 文件类型
