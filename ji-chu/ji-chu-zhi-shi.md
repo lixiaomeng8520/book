@@ -15,25 +15,25 @@
 ```bash
 cat > /etc/yum.repos.d/centos.repo <<EOF
 [base]
-name=CentOS-$releasever - Base
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+name=CentOS-7 - Base
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/7/os/\$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=\$basearch&repo=os
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 
 #released updates
 [updates]
-name=CentOS-$releasever - Updates
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/updates/$basearch/
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=updates
+name=CentOS-7 - Updates
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/7/updates/\$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=\$basearch&repo=updates
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 
 #additional packages that may be useful
 [extras]
-name=CentOS-$releasever - Extras
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch/
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=extras
+name=CentOS-7 - Extras
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/7/extras/\$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=\$basearch&repo=extras
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/centos/RPM-GPG-KEY-CentOS-7
 EOF
@@ -45,7 +45,7 @@ EOF
 cat > /etc/yum.repos.d/epel.repo <<EOF
 [epel]
 name=epel
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/epel/7/$basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/epel/7/\$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/epel/RPM-GPG-KEY-EPEL-7
@@ -59,7 +59,7 @@ cat > /etc/yum.repos.d/ius.repo <<EOF
 
 [ius-stable]
 name=ius - stable
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/ius/stable/CentOS/7/$basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/ius/stable/CentOS/7/\$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/ius/IUS-COMMUNITY-GPG-KEY
@@ -72,8 +72,8 @@ EOF
 cat > /etc/yum.repos.d/docker.repo <<EOF
 
 [docker-ce-stable]
-name=Docker CE Stable - $basearch
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/7/$basearch/stable
+name=Docker CE Stable - \$basearch
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/7/\$basearch/stable
 enabled=1
 gpgcheck=1
 gpgkey=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/gpg
