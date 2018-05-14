@@ -16,6 +16,7 @@
 * 开发
   * [git](kai-fa/git.md)
   * [docker](kai-fa/docker.md)
+  * [nginx](kai-fa/nginx.md)
 * 编辑器
   * [vim](bian-ji-qi/vim.md)
   * sublime
