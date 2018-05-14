@@ -57,7 +57,7 @@ gpgkey=https://mirrors.tuna.tsinghua.edu.cn/epel/RPM-GPG-KEY-EPEL-7
 ```bash
 vim /etc/yum.repos.d/ius.repo
 
-[ius - stable]
+[ius-stable]
 name=ius - stable
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/ius/stable/CentOS/7/$basearch
 enabled=1
