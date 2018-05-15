@@ -53,3 +53,9 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | 提交转换lf，检出转换crlf | git config core.autocrlf true |
 | 提交检出均不转换 | git config core.autocrlf false |
 
+## 工作流
+
+![](../.gitbook/assets/git-model-2x.png)
+
+
+
