@@ -21,5 +21,9 @@ Host github.com *.github.com
     User git
 ```
 
+## 安装
 
+```bash
+yum install git2u
+```
 
