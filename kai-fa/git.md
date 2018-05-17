@@ -67,10 +67,13 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 ### pull
 
 > 最后没有写本地分支的，都是指当前分支。
+>
+> 没有写远程分支的，则必须当前分支有跟踪的远程分支，否则会报错。
 
 | 描述 | 命令 |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | 完整形式 | git pull gitee master:dev |
 | 与当前分支合并 | git pull gitee master |
-|  |  |
+| 从gitee里当前分支的跟踪分支拉取 | git pull gitee |
+| 从唯一的服务器的当前分支的跟踪分支拉取 | git pull |
 
