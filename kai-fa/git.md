@@ -2,7 +2,8 @@
 
 ## 教程
 
-[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+* [https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+* [https://www.yiibai.com/git/](https://www.yiibai.com/git/)
 
 ## ss代理ssh
 
