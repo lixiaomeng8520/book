@@ -1,5 +1,9 @@
 # git
 
+## 教程
+
+[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+
 ## ss代理ssh
 
 ss右键 -&gt; 允许来自局域网的连接。
