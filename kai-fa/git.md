@@ -64,3 +64,13 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ## 命令
 
+### pull
+
+> 最后没有写本地分支的，都是指当前分支。
+
+| 描述 | 命令 |
+| --- | --- | --- | --- |
+| 完整形式 | git pull gitee master:dev |
+| 与当前分支合并 | git pull gitee master |
+|  |  |
+
