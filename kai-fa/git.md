@@ -64,16 +64,36 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ## 命令
 
+### branch
+
+> 可以有多个远程仓库，本地分支可以设置不同仓库的远程分支。
+>
+> 本地分支的跟踪分支只有一个。
+
 ### pull
 
-> 最后没有写本地分支的，都是指当前分支。
+> 没有写本地分支的，都是指当前分支。
 >
 > 没有写远程分支的，则必须当前分支有跟踪的远程分支，否则会报错。
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- |
-| 完整形式 | git pull gitee master:dev |
-| 与当前分支合并 | git pull gitee master |
-| 从gitee里当前分支的跟踪分支拉取 | git pull gitee |
-| 从唯一的服务器的当前分支的跟踪分支拉取 | git pull |
+| 完整形式 | git pull server remote\_branch:local\_branch |
+| 与当前分支合并 | git pull server remote\_branch |
+| 与当前分支合并（从**跟踪分支**） | git pull server |
+| 与当前分支合并（从**唯一服务器**的**跟踪分支**） | git pull |
+
+### push
+
+> 推送原则上要同名
+
+| 描述 | 命令 |
+| --- | --- | --- | --- | --- | --- |
+| 完整形式 | git push server local\_branch:remote\_branch |
+| 推送到同名分支，不存在则新建 | git push server local\_branch |
+| 当前分支要和**跟踪分支**同名 | git push server |
+| 当前分支要和**唯一服务器**的**跟踪分支**同名 | git push |
+| 删除远程分支 | git push server :remote\_branch |
+
+
 
