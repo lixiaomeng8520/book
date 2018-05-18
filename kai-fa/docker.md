@@ -2,6 +2,7 @@
 
 ## 参考
 
+* [概念](https://docs.docker.com/get-started/)
 * [安装](https://docs.docker.com/install/linux/docker-ce/centos/)
 * [dockerd 官方文档](https://docs.docker.com/engine/reference/commandline/dockerd/)
 * [swarm 官方文档](https://docs.docker.com/engine/swarm/)
