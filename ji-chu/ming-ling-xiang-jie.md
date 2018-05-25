@@ -69,3 +69,9 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | 列出php71u包含的文件 | rpm -ql php71u-fpm |
 | 查看filename属于哪个rpm包 | rpm -qf filename |
 
+## tar
+
+| 描述 | 命令 |
+| --- | --- |
+| 解压包 |  |
+

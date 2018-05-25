@@ -80,6 +80,10 @@ gpgkey=https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/gpg
 EOF
 ```
 {% endtab %}
+
+{% tab title="mongo" %}
+
+{% endtab %}
 {% endtabs %}
 
 ## 文件类型
