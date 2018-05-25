@@ -90,6 +90,7 @@ name=MongoDB Repository
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/mongodb/yum/el7/
 gpgcheck=0
 enabled=1
+EOF
 ```
 {% endtab %}
 {% endtabs %}
