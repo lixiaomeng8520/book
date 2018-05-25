@@ -81,8 +81,16 @@ EOF
 ```
 {% endtab %}
 
-{% tab title="mongo" %}
-
+{% tab title="mongodb" %}
+```bash
+cat > /etc/yum.repos.d/mongodb.repo <<EOF
+​
+[mongodb-org]
+name=MongoDB Repository
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/mongodb/yum/el7/
+gpgcheck=0
+enabled=1
+```
 {% endtab %}
 {% endtabs %}
 
