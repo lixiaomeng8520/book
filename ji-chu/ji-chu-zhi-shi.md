@@ -84,8 +84,7 @@ EOF
 {% tab title="mongodb" %}
 ```bash
 cat > /etc/yum.repos.d/mongodb.repo <<EOF
-​
-[mongodb-org]
+​[mongodb-org]
 name=MongoDB Repository
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/mongodb/yum/el7/
 gpgcheck=0
