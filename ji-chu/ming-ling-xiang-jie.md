@@ -72,7 +72,9 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 ## tar
 
 | 描述 | 命令 |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | 解压包 | tar -zxvf xx.tar.gz -C dir |
 | 列出包文件 | tar -ztvf xx.tar.gz |
+| 压缩文件压缩 | tar -zcvf xx.tar.gz a.txt b.txt c.txt |
+| 指定目录下的文件压缩 | tar -zcvf xx.tar.gz -C /data . |
 
