@@ -3,6 +3,7 @@
 ## 参考
 
 1. [linux命令大全](http://www.runoob.com/linux/linux-command-manual.html)
+2. [linux系统排查](https://www.cnblogs.com/Security-Darren/p/4685629.html)
 
 ## nmcli
 
