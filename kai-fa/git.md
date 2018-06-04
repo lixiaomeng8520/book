@@ -118,5 +118,7 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | 当前分支要和**跟踪分支**同名 | git push |
 | 删除远程分支 | git push server :remote\_branch |
 
+### reset
+
 
 
