@@ -121,7 +121,7 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ### reset
 
-> commit：将当前`HEAD`复位到指定状态。已经push到远程仓库的 commit，不允许reset。
+> commit：将当前`HEAD`复位到指定状态，之后的提交销毁。已经push到远程仓库的 commit，不允许reset。
 
 | 描述 | 命令 |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | git reset --mixed \[HEAD\|commit\] | 重设HEAD，缓存区（默认） |
 | git reset --soft \[HEAD\|commit\] | 重设HEAD |
 
-> file：将指定commit的文件加入到缓存区中。
+> file：将指定commit的文件同步到缓存区中。
 
 | 描述 | 命令 |
 | --- | --- |
@@ -137,18 +137,18 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ### checkout
 
-> commit：将HEAD移动到指定提交，更新缓存区和工作区。
+> commit：将HEAD移动到指定提交，更新缓存区和工作区，但是不会修改已经更改过的缓存区和工作区。
 
 | 描述 | 命令 |
 | --- | --- | --- |
 | git checkout branch | 切换分支。 |
 | git checkout HEAD^ | 切换到指定提交，会造成 HEAD分离。 |
 
-> file：将指定commit的文件同步到工作区。
+> file：将指定commit的文件同步到缓存区和工作区。
 
 | 描述 | 命令 |
 | --- | --- |
-| git checkout \[HEAD\|commt\] file.txt | 将指定commit的文件同步到工作区。 |
+| git checkout \[HEAD\|commt\] file.txt | 将指定commit的文件同步到缓存区和工作区。 |
 
 
 
