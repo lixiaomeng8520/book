@@ -37,15 +37,15 @@ yum install git2u
 
 ### 配置文件
 
+{% hint style="info" %}
+git config \[--global\|--system\] -e  打开对应配置文件进行编辑
+{% endhint %}
+
 | 命令 | 路径 | 描述 |
 | --- | --- | --- | --- |
 | git config | 当前项目目录 | 项目配置，作用于当前项目 |
 | git config --global | ~/.gitconfig | 家目录，作用于当前用户 |
 | git config --system | /etc/gitconfig | 全局配置 |
-
-{% hint style="info" %}
-git config \[--global\|--system\] -e  打开对应配置文件进行编辑
-{% endhint %}
 
 ### 常用配置
 
