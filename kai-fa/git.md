@@ -4,6 +4,14 @@
 
 * 官方教程
 * [易百git教程](https://www.yiibai.com/git/)
+* [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
+
+## 安装
+
+```bash
+# ius
+yum install git2u
+```
 
 ## ss代理ssh
 
@@ -24,13 +32,6 @@ Host github.com *.github.com
     ProxyCommand connect-proxy -H 192.168.56.1:1080 %h %p
     IdentityFile ~/.ssh/id_rsa
     User git
-```
-
-## 安装
-
-```bash
-# ius
-yum install git2u
 ```
 
 ## 配置
