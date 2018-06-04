@@ -5,6 +5,7 @@
 * 官方教程
 * [易百git教程](https://www.yiibai.com/git/)
 * [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
+* [代码回滚：git reset、git checkout和git revert区别和联系](https://www.cnblogs.com/houpeiyong/p/5890748.html)
 
 ## 2. 安装
 
@@ -119,6 +120,35 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | 删除远程分支 | git push server :remote\_branch |
 
 ### reset
+
+> commit：将当前`HEAD`复位到指定状态。已经push到远程仓库的 commit，不允许reset。
+
+| 描述 | 命令 |
+| --- | --- | --- | --- |
+| git reset --hard \[HEAD\|commit\] | 重设HEAD，缓存区，工作区 |
+| git reset --mixed \[HEAD\|commit\] | 重设HEAD，缓存区（默认） |
+| git reset --soft \[HEAD\|commit\] | 重设HEAD |
+
+> file：将指定commit的文件加入到缓存区中。
+
+| 描述 | 命令 |
+| --- | --- |
+| git reset \[HEAD^\] file.txt | 将文件加入缓存区（可以直接提交），如果是HEAD，则相当于unstage了。 |
+
+### checkout
+
+> commit：将HEAD移动到指定提交，更新缓存区和工作区。
+
+| 描述 | 命令 |
+| --- | --- | --- |
+| git checkout branch | 切换分支。 |
+| git checkout HEAD^ | 切换到指定提交，会造成 HEAD分离。 |
+
+> file：将指定commit的文件同步到工作区。
+
+| 描述 | 命令 |
+| --- | --- |
+| git checkout \[HEAD\|commt\] file.txt | 将指定commit的文件同步到工作区。 |
 
 
 
