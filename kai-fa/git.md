@@ -1,19 +1,41 @@
 # git
 
-## 教程
+## 1. 教程
 
 * 官方教程
 * [易百git教程](https://www.yiibai.com/git/)
 * [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
 
-## 安装
+## 2. 安装
 
 ```bash
 # ius
 yum install git2u
 ```
 
-## ss代理ssh
+## 3. 知识
+
+### 三个区域
+
+1. HEAD 指向最近一次commit里的所有snapshot
+2. Index 缓存区域，只有Index区域里的东西才可以被commit
+3. Working Directory 用户操作区域
+
+![](../.gitbook/assets/264847285-57a482dc54c83_articlex.png)
+
+当你checkout分支的时候，git做了这么三件事情
+
+1. 将HEAD指向那个分支的最后一次commit
+2. 将HEAD指向的commit里所有文件的snapshot替换掉Index区域里原来的内容
+3. 将Index区域里的内容填充到Working Directory里
+
+所以你可以发现，HEAD、Index、Working Directory这个时候里的内容都是一模一样的。
+
+**注意**：一般会误解为，Index中的内容是空的，只有git add后才会有东西。实际上不是，Index里一直是有东西的。
+
+所以，Git的所有操作就是对这三个区域的状态（或内容）的操作。
+
+## 4. ss代理ssh
 
 ss右键 -&gt; 允许来自局域网的连接。
 
@@ -34,7 +56,7 @@ Host github.com *.github.com
     User git
 ```
 
-## 配置
+## 5. 配置
 
 ### 配置文件
 
@@ -59,11 +81,11 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | 提交转换lf，检出转换crlf | git config core.autocrlf true |
 | 提交检出均不转换 | git config core.autocrlf false |
 
-## 工作流
+## 6. 工作流
 
 ![](../.gitbook/assets/git-model-2x.png)
 
-## 命令
+## 7. 命令
 
 ### branch
 
