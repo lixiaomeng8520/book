@@ -3,7 +3,7 @@
 ## 教程
 
 * 官方教程
-* 易百git教程
+* [易百git教程](https://www.yiibai.com/git/)
 
 ## ss代理ssh
 
