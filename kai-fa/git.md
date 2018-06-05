@@ -87,7 +87,7 @@ Host github.com *.github.com
 
 ## 7. 命令
 
-### 撤销操作
+### 7.1 撤销操作
 
 工作区不安全的操作，谨慎使用。
 
@@ -125,7 +125,7 @@ Please commit your changes or stash them before you switch branches.
 | `reset (commit) [file]` | 1 | 0 | 1 |
 | `checkout (commit) [file]` | 1 | 1 | 0 |
 
-### pull
+### 7.2 pull
 
 > 没有写本地分支的，都是指当前分支。
 >
@@ -138,11 +138,11 @@ Please commit your changes or stash them before you switch branches.
 | 与当前分支合并（从**跟踪分支**） | `git pull server` |
 | 与当前分支合并（从**跟踪分支**） | `git pull` |
 
-### push
+### 7.3 push
 
 > 推送原则上要同名
 
-| 描述 | 命令 |
+| **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- |
 | 完整形式 | `git push server local_branch:remote_branch` |
 | 推送到同名分支，不存在则新建 | `git push server local_branch` |
@@ -150,5 +150,10 @@ Please commit your changes or stash them before you switch branches.
 | 当前分支要和**跟踪分支**同名 | `git push` |
 | 删除远程分支 | `git push server :remote_branch` |
 
+### 7.4 对比
 
+| **描述** | **命令** |
+| --- | --- | --- |
+| 对比工作区和暂存区 | `git diff` |
+| 对比暂存区和HEAD | `git diff --cached` |
 
