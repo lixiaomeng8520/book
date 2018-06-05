@@ -6,7 +6,7 @@
 
 ## 几个主命令
 
-| 描述 | 命令 |
+| **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- | --- |
 | 管理服务 | `systemctl` |
 | 启动耗时 | `systemd-analyze` |
@@ -17,7 +17,7 @@
 
 ## 电源
 
-| 描述 | 命令 |
+| **描述** | **命令** |
 | --- | --- | --- |
 | 关机 | `systemctl poweroff` |
 | 重启 | `systemctl reboot` |
@@ -26,7 +26,7 @@
 
 systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 
-| 描述 | 类型 |
+| **描述** | **类型** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 系统服务 | Service |
 | 多个unit构成一个组 | Target |
@@ -43,7 +43,7 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 
 ## unit管理
 
-| 描述 | 命令 |
+| **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 正在运行的unit | `systemctl list-units` |
 | 所有unit | `systemctl list-units --all` |
@@ -62,7 +62,7 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 
  `/etc/systemd/system/ -> /usr/lib/systemd/system/`
 
-|  描述 |  命令 |
+| **描述** | **命令** |
 | --- | --- | --- |
 |  列出unit files | `systemctl list-unit-files --type=service` |
 |  列出单个unit files | `systemctl list-unit-files smb.service` |
