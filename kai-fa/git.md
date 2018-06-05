@@ -37,24 +37,6 @@ yum install git2u
 
 所以，Git的所有操作就是对这三个区域的状态（或内容）的操作。
 
-### 撤销操作对三个区域影响
-
-#### commit级别
-
-| 操作 | Index暂存区 | workdir工作区 | 工作区安全 |
-| --- | --- | --- | --- | --- |
-|  reset --soft \[commit\] | 0 | 0 | 1 |
-|  reset \[--mixed\] \[commit\] | 1 | 0 | 1 |
-|  reset --hard \[commit\] | 1 | 1 | 0 |
-|  checkout \[commit\] | 0 | 0 | 1 |
-
-#### file级别
-
-| 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
-| --- | --- | --- |
-|  reset \(commit\) \[file\] | 1 | 0 | 1 |
-|  checkout \(commit\) \[file\] | 1 | 1 | 0 |
-
 ## 4. ss代理ssh
 
 ss右键 -&gt; 允许来自局域网的连接。
@@ -107,11 +89,23 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ## 7. 命令
 
-### branch
+### 撤销操作
 
-> 可以有多个远程仓库，本地分支可以设置不同仓库的远程分支。
->
-> 本地分支的跟踪分支只有一个。
+#### commit级别
+
+| 操作 | Index暂存区 | workdir工作区 | 工作区安全 |
+| --- | --- | --- | --- | --- |
+|  reset --soft \[commit\] | 0 | 0 | 1 |
+|  reset \[--mixed\] \[commit\] | 1 | 0 | 1 |
+|  reset --hard \[commit\] | 1 | 1 | 0 |
+|  checkout \[commit\] | 1 | 1（不影响修改的） | 1 |
+
+#### file级别
+
+| 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
+| --- | --- | --- |
+|  reset \(commit\) \[file\] | 1 | 0 | 1 |
+|  checkout \(commit\) \[file\] | 1 | 1 | 0 |
 
 ### pull
 
