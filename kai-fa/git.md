@@ -6,6 +6,7 @@
 * [易百git教程](https://www.yiibai.com/git/)
 * [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
 * [代码回滚：git reset、git checkout和git revert区别和联系](https://www.cnblogs.com/houpeiyong/p/5890748.html)
+* [Git 工具 - 重置揭密](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86)
 
 ## 2. 安装
 
@@ -125,9 +126,9 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 | 描述 | 命令 |
 | --- | --- | --- | --- |
-| git reset --hard \[HEAD\|commit\] | 重设HEAD，缓存区，工作区 |
-| git reset --mixed \[HEAD\|commit\] | 重设HEAD，缓存区（默认） |
-| git reset --soft \[HEAD\|commit\] | 重设HEAD |
+| 重设HEAD，缓存区，工作区 | git reset --hard \[HEAD\|commit\] |
+| 重设HEAD，缓存区 | git reset --mixed \[HEAD\|commit\] |
+| 重设HEAD | git reset --soft \[HEAD\|commit\] |
 
 > file：将指定commit的文件同步到缓存区中。
 
