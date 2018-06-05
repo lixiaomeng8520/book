@@ -48,15 +48,15 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 | 正在运行的unit | `systemctl list-units` |
 | 所有unit | `systemctl list-units --all` |
 | 类型为service | `systemctl list-units --type=service` |
-|  显示一个unit参数 | `systemctl show nginx` |
+| 显示一个unit参数 | `systemctl show nginx` |
 | 状态 | `systemctl status nginx.service` |
 | 启动 | `systemctl start nginx` |
-|  停止 | `systemctl stop nginx` |
-|  重启 | `systemctl restart nginx` |
-|  重载配置文件 | `systemctl reload nginx` |
-|  杀死服务所有子进程 | `systemctl kill nginx` |
-|  开机启动 | `systemctl enable nginx` |
-|  开机不启动 | `systemctl disable nginx` |
+| 停止 | `systemctl stop nginx` |
+| 重启 | `systemctl restart nginx` |
+| 重载配置文件 | `systemctl reload nginx` |
+| 杀死服务所有子进程 | `systemctl kill nginx` |
+| 开机启动 | `systemctl enable nginx` |
+| 开机不启动 | `systemctl disable nginx` |
 
 ## 配置文件
 
