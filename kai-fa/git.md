@@ -97,18 +97,28 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 `git reset commit` 操作会销毁掉commit之后的提交，所以已经push过的，不要使用reset。
 
-`git checkout` 常用于切换分支，可能会造成HEAD分离。
+`git checkout` 在Index或Workdir有修改的情况下，如果commit和HEAD不一样，会提示
 
-| 操作 | Index暂存区 | workdir工作区 | 工作区安全 |
+```text
+error: Your local changes to the following files would be overwritten by checkout:
+	log
+Please commit your changes or stash them before you switch branches.
+```
+
+如果commit和HEAD一样，则不提示，也不做任何改变，比如两个分支目前HEAD相同的情况。
+
+| 操作 | Index | Workdir | 工作区安全 |
 | --- | --- | --- | --- | --- |
 | `reset --soft [commit]` | 0 | 0 | 1 |
 | `reset [--mixed] [commit]` | 1 | 0 | 1 |
 | `reset --hard [commit]` | 1 | 1 | 0 |
-| `checkout [commit]` | 1 | 1（不影响修改的） | 1 |
+| `checkout [commit]` | 1 | 1 | 1（会提醒） |
 
 #### file级别
 
 `git checkout HEAD file` 相当于撤销add操作（unstage）。
+
+`git checkout commit -- file` = `git reset --hard head -- file` （可惜不存在）
 
 | 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
 | --- | --- | --- |
