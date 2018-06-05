@@ -68,20 +68,20 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 | 命令 | 路径 | 描述 |
 | --- | --- | --- | --- |
-| git config | 当前项目目录 | 项目配置，作用于当前项目 |
-| git config --global | ~/.gitconfig | 家目录，作用于当前用户 |
-| git config --system | /etc/gitconfig | 全局配置 |
+| `git config` | 当前项目目录 | 项目配置，作用于当前项目 |
+| `git config --global` | ~/.gitconfig | 家目录，作用于当前用户 |
+| `git config --system` | /etc/gitconfig | 全局配置 |
 
 ### 常用配置
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 设置用户名 | git config user.name lixiaomeng |
-| 设置邮箱 | git config user.email lixiaomeng8520@163.com |
-| 忽略文件权限 | git config core.filemode false |
-| 提交转换lf，检出不转换 | git config core.autocrlf input |
-| 提交转换lf，检出转换crlf | git config core.autocrlf true |
-| 提交检出均不转换 | git config core.autocrlf false |
+| 设置用户名 | `git config user.name lixiaomeng` |
+| 设置邮箱 | `git config user.email lixiaomeng8520@163.com` |
+| 忽略文件权限 | \`git config core.filemode false\` |
+| 提交转换lf，检出不转换 | `git config core.autocrlf input` |
+| 提交转换lf，检出转换crlf | `git config core.autocrlf true` |
+| 提交检出均不转换 | `git config core.autocrlf false` |
 
 ## 6. 工作流
 
@@ -91,21 +91,29 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 ### 撤销操作
 
+工作区不安全的操作，谨慎使用。
+
 #### commit级别
+
+`git reset commit` 操作会销毁掉commit之后的提交，所以已经push过的，不要使用reset。
+
+`git checkout` 常用于切换分支，可能会造成HEAD分离。
 
 | 操作 | Index暂存区 | workdir工作区 | 工作区安全 |
 | --- | --- | --- | --- | --- |
-|  reset --soft \[commit\] | 0 | 0 | 1 |
-|  reset \[--mixed\] \[commit\] | 1 | 0 | 1 |
-|  reset --hard \[commit\] | 1 | 1 | 0 |
-|  checkout \[commit\] | 1 | 1（不影响修改的） | 1 |
+| `reset --soft [commit]` | 0 | 0 | 1 |
+| `reset [--mixed] [commit]` | 1 | 0 | 1 |
+| `reset --hard [commit]` | 1 | 1 | 0 |
+| `checkout [commit]` | 1 | 1（不影响修改的） | 1 |
 
 #### file级别
 
+`git checkout HEAD file` 相当于撤销add操作（unstage）。
+
 | 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
 | --- | --- | --- |
-|  reset \(commit\) \[file\] | 1 | 0 | 1 |
-|  checkout \(commit\) \[file\] | 1 | 1 | 0 |
+| `reset (commit) [file]` | 1 | 0 | 1 |
+| `checkout (commit) [file]` | 1 | 1 | 0 |
 
 ### pull
 
@@ -115,10 +123,10 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- |
-| 完整形式 | git pull server remote\_branch:local\_branch |
-| 与当前分支合并 | git pull server remote\_branch |
-| 与当前分支合并（从**跟踪分支**） | git pull server |
-| 与当前分支合并（从**跟踪分支**） | git pull |
+| 完整形式 | `git pull server remote_branch:local_branch` |
+| 与当前分支合并 | `git pull server remote_branch` |
+| 与当前分支合并（从**跟踪分支**） | `git pull server` |
+| 与当前分支合并（从**跟踪分支**） | `git pull` |
 
 ### push
 
@@ -126,42 +134,11 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- | --- |
-| 完整形式 | git push server local\_branch:remote\_branch |
-| 推送到同名分支，不存在则新建 | git push server local\_branch |
-| 当前分支要和**跟踪分支**同名 | git push server |
-| 当前分支要和**跟踪分支**同名 | git push |
-| 删除远程分支 | git push server :remote\_branch |
-
-### reset
-
-> commit：将当前`HEAD`复位到指定状态，之后的提交销毁。已经push到远程仓库的 commit，不允许reset。
-
-| 描述 | 命令 |
-| --- | --- | --- | --- |
-| 重设HEAD，缓存区，工作区 | git reset --hard \[HEAD\|commit\] |
-| 重设HEAD，缓存区 | git reset --mixed \[HEAD\|commit\] |
-| 重设HEAD | git reset --soft \[HEAD\|commit\] |
-
-> file：将指定commit的文件同步到缓存区中。
-
-| 描述 | 命令 |
-| --- | --- |
-| git reset \[HEAD^\] file.txt | 将文件加入缓存区（可以直接提交），如果是HEAD，则相当于unstage了。 |
-
-### checkout
-
-> commit：将HEAD移动到指定提交，更新缓存区和工作区，但是不会修改已经更改过的缓存区和工作区。
-
-| 描述 | 命令 |
-| --- | --- | --- |
-| git checkout branch | 切换分支。 |
-| git checkout HEAD^ | 切换到指定提交，会造成 HEAD分离。 |
-
-> file：将指定commit的文件同步到缓存区和工作区。
-
-| 描述 | 命令 |
-| --- | --- |
-| git checkout \[HEAD\|commt\] file.txt | 将指定commit的文件同步到缓存区和工作区。 |
+| 完整形式 | `git push server local_branch:remote_branch` |
+| 推送到同名分支，不存在则新建 | `git push server local_branch` |
+| 当前分支要和**跟踪分支**同名 | `git push server` |
+| 当前分支要和**跟踪分支**同名 | `git push` |
+| 删除远程分支 | `git push server :remote_branch` |
 
 
 
