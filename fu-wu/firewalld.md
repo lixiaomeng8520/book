@@ -14,7 +14,7 @@
 
 Zone
 
-| 名称 | 描述 |
+| **名称** | **描述** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  Drop Zone |  只出不进; 相当于iptables -j drop |
 |  Block Zone |  禁止进入, 通过icmp-host-prohibited拒绝, 只允许本机内建立的连接. |
@@ -28,30 +28,30 @@ Zone
 
 ## 命令
 
-| 描述 | 命令 |
+| **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 状态 | firewall-cmd --state |
-| 重载配置 | firewall-cmd --reload |
+| 状态 | `firewall-cmd --state` |
+| 重载配置 | `firewall-cmd --reload` |
 |  |  |
-| 获取所有zone | firewall-cmd --get-zones |
-| 获取默认zone | firewall-cmd --get-default-zone |
-| 获取public zone详细信息 | firewall-cmd --list-all --zone=public |
-| 设置默认zone | firewall-cmd --set-default-zone=drop |
+| 获取所有zone | `firewall-cmd --get-zones` |
+| 获取默认zone | `firewall-cmd --get-default-zone` |
+| 获取public zone详细信息 | `firewall-cmd --list-all --zone=public` |
+| 设置默认zone | `firewall-cmd --set-default-zone=drop` |
 |  |  |
-| 获取所有服务 | firewall-cmd --get-services |
-| 列出系统自带服务 | ls /usr/lib/firewalld/services |
+| 获取所有服务 | `firewall-cmd --get-services` |
+| 列出系统自带服务 | `ls /usr/lib/firewalld/services` |
 |  |  |
-| public zone添加服务 | firewall-cmd --zone=public --add-service=http --permanent |
-| 添加8001端口 | firewall-cmd --zone=public --add-port=8001/tcp --permanent |
+| public zone添加服务 | `firewall-cmd --zone=public --add-service=http --permanent` |
+| 添加8001端口 | `firewall-cmd --zone=public --add-port=8001/tcp --permanent` |
 
 ## 服务配置
 
 ### 配置文件路径
 
-| 描述 | 路径 |
+| **描述** | **路径** |
 | --- | --- | --- |
-| 系统 | /usr/lib/firewalld/services |
-| 自定义 | /etc/firewalld/services |
+| 系统 | `/usr/lib/firewalld/services` |
+| 自定义 | `/etc/firewalld/services` |
 
 ### 添加自定义服务
 
