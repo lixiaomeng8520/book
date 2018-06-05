@@ -34,21 +34,15 @@ netfilter通过以下方式对数据包进行分类：
 
 用以对数据进行过滤。
 
-{% hint style="info" %}
-链：INPUT、FORWARD、OUTPUT
-{% endhint %}
+链：`INPUT`、`FORWARD`、`OUTPUT`
 
-```bash
-# 控制INPUT和OUTPUT本机的网络流量
-iptables -A INPUT -s 192.168.1.100 -j DROP
-iptables -A INPUT -p tcp --dport 80 -j DROP
-iptables -A INPUT -s 192.168.1.0/24 -p tcp --dport 22 -j DROP
-iptables -A INPUT -i eth0 -j ACCEPT
-
-# 当linux作为路由（进行数据转发）设备使用的时候，可以通过定义forward规则来进行转发控制
-# 禁止 192.168.1.0/24 到 10.1.1.0/24 的流量
-iptables -A FORWARD -s 192.168.1.0/24 -d 10.1.1.0/24 -j DROP
-```
+| **描述** | **命令** |
+| --- | --- | --- | --- | --- | --- |
+| 控制INPUT和OUTPUT本机的网络流量 | `iptables -A INPUT -s 192.168.1.100 -j DROP` |
+|  | `iptables -A INPUT -p tcp --dport 80 -j DROP` |
+|  | `iptables -A INPUT -s 192.168.1.0/24 -p tcp --dport 22 -j DROP` |
+|  | `iptables -A INPUT -i eth0 -j ACCEPT` |
+| 禁止 192.168.1.0/24 到 10.1.1.0/24 的流量 | `iptables -A FORWARD -s 192.168.1.0/24 -d 10.1.1.0/24 -j DROP` |
 
 ### nat
 
@@ -57,23 +51,14 @@ iptables -A FORWARD -s 192.168.1.0/24 -d 10.1.1.0/24 -j DROP
 * SNAT 源地址转换，用于伪装内部地址。
 * DNAT 目标地址换砖，通常用于跳转。
 
-{% hint style="info" %}
-链：PREROUTING、OUTPUT、POSTROUTING
-{% endhint %}
+链：`PREROUTING`、`OUTPUT`、`POSTROUTING`
 
-```bash
-# 进入本机之前跳转
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-dest 192.168.1.10
-
-# 出本机之前跳转
-iptables -t nat -A OUTPUT -p tcp --dport -j DNAT --to-dest 192.168.1.100:8080
-
-# 伪装，一般意义的NAT
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-
-# 隐藏源地址
-iptables -t nat -A POSTROUTING -j SNAT --to-source 1.2.3.4
-```
+| **描述** | **命令** |
+| --- | --- | --- | --- | --- |
+| 进入本机之前跳转 | `iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-dest 192.168.1.10` |
+| 出本机之前跳转 | `iptables -t nat -A OUTPUT -p tcp --dport -j DNAT --to-dest 192.168.1.100:8080` |
+| 伪装，一般意义的NAT，所有从 eth0 出的流量进行地址转换。因为公网地址经常是变化的，所以这里用 MASQUERADE | `iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE` |
+| 隐藏源地址 | `iptables -t nat -A POSTROUTING -j SNAT --to-source 1.2.3.4` |
 
 ### mangle
 
