@@ -37,6 +37,24 @@ yum install git2u
 
 所以，Git的所有操作就是对这三个区域的状态（或内容）的操作。
 
+### 撤销操作对三个区域影响
+
+#### commit级别
+
+| 操作 | Index暂存区 | workdir工作区 | 工作区安全 |
+| --- | --- | --- | --- | --- |
+|  reset --soft \[commit\] | 0 | 0 | 1 |
+|  reset \[--mixed\] \[commit\] | 1 | 0 | 1 |
+|  reset --hard \[commit\] | 1 | 1 | 0 |
+|  checkout \[commit\] | 0 | 0 | 1 |
+
+#### file级别
+
+| 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
+| --- | --- | --- |
+|  reset \(commit\) \[file\] | 1 | 0 | 1 |
+|  checkout \(commit\) \[file\] | 1 | 1 | 0 |
+
 ## 4. ss代理ssh
 
 ss右键 -&gt; 允许来自局域网的连接。
