@@ -11,6 +11,8 @@ timedatectl status
 
 ## chrony 配置
 
+安装：`yum install chrony`
+
 修改 /etc/chrony.conf 配置文件
 
 ```bash
