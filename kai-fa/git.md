@@ -111,7 +111,7 @@ Please commit your changes or stash them before you switch branches.
 | --- | --- | --- | --- | --- |
 | `reset --soft [commit]` | 0 | 0 | 1 |
 | `reset [--mixed] [commit]` | 1 | 0 | 1 |
-| `reset --hard [commit]` | 1 | 1 | 0 |
+| `reset --hard [commit]` | 1 | 1 | **0** |
 | `checkout [commit]` | 1 | 1 | 1（会提醒） |
 
 #### file级别
@@ -123,7 +123,7 @@ Please commit your changes or stash them before you switch branches.
 | 操作 | Index暂存区 | Workdir工作区 | 工作区安全 |
 | --- | --- | --- |
 | `reset (commit) [file]` | 1 | 0 | 1 |
-| `checkout (commit) [file]` | 1 | 1 | 0 |
+| `checkout (commit) [file]` | 1 | 1 | **0** |
 
 ### 7.2 pull
 
