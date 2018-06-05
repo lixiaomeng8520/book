@@ -95,7 +95,9 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 
 #### commit级别
 
-`git reset commit` 操作会销毁掉commit之后的提交，所以已经push过的，不要使用reset。
+分支（`master`，`dev`），`HEAD` 等都是指针，`reset` 和 `checkout` 的直接区别就是 `reset` 会移动分支的指向，相当于分支之后的操作都被遗失了，而 `checkout` 只会移动 `HEAD`，对分支没有影响。
+
+`git reset commit` 操作会销毁掉 `commit` 之后的提交，所以已经push过的，不要使用reset。
 
 `git checkout` 在Index或Workdir有修改的情况下，如果commit和HEAD不一样，会提示
 
