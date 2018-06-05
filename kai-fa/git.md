@@ -60,11 +60,9 @@ Host github.com *.github.com
 
 ## 5. 配置
 
-### 配置文件
+`git config [--global|--system] -e`  打开对应配置文件进行编辑
 
-{% hint style="info" %}
-git config \[--global\|--system\] -e  打开对应配置文件进行编辑
-{% endhint %}
+### 配置文件
 
 | 命令 | 路径 | 描述 |
 | --- | --- | --- | --- |
@@ -78,7 +76,7 @@ git config \[--global\|--system\] -e  打开对应配置文件进行编辑
 | --- | --- | --- | --- | --- | --- | --- |
 | 设置用户名 | `git config user.name lixiaomeng` |
 | 设置邮箱 | `git config user.email lixiaomeng8520@163.com` |
-| 忽略文件权限 | \`git config core.filemode false\` |
+| 忽略文件权限 | `git config core.filemode false` |
 | 提交转换lf，检出不转换 | `git config core.autocrlf input` |
 | 提交转换lf，检出转换crlf | `git config core.autocrlf true` |
 | 提交检出均不转换 | `git config core.autocrlf false` |
