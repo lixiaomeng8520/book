@@ -46,8 +46,8 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 | **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 正在运行的unit | `systemctl list-units` |
-| 所有unit | `systemctl list-units --all` |
-| 类型为service | `systemctl list-units --type=service` |
+| 所有unit | `systemctl --all list-units` |
+| 类型为service且正在运行的unit | `systemctl --type service list-units` |
 | 显示一个unit参数 | `systemctl show nginx` |
 | 状态 | `systemctl status nginx.service` |
 | 启动 | `systemctl start nginx` |
