@@ -93,7 +93,7 @@ Host github.com *.github.com
 
 #### commit级别
 
-分支（`master`，`dev`），`HEAD` 等都是指针，`reset` 和 `checkout` 的直接区别就是 `reset` 会移动分支的指向，相当于分支之后的操作都被遗失了，而 `checkout` 只会移动 `HEAD`，对分支没有影响。
+分支（`master`，`dev`），`HEAD` 等都是指针，`reset` 和 `checkout` 的直接区别就是 `reset` 会移动 `HEAD` 和分支的指向，而 `checkout` 只会移动 `HEAD`，对分支没有影响。
 
 `git reset commit` 操作会销毁掉 `commit` 之后的提交，所以已经push过的，不要使用reset。
 
