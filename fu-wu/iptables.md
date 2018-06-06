@@ -37,11 +37,15 @@ netfilter通过以下方式对数据包进行分类：
 链：`INPUT`、`FORWARD`、`OUTPUT`
 
 | **描述** | **命令** |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 默认策略 | `iptables -P INPUT DROP` |
+|  | `iptables -P FORWARD DROP` |
+|  | `iptables -P OUTPUT DROP` |
 | 控制INPUT和OUTPUT本机的网络流量 | `iptables -A INPUT -s 192.168.1.100 -j DROP` |
 |  | `iptables -A INPUT -p tcp --dport 80 -j DROP` |
 |  | `iptables -A INPUT -s 192.168.1.0/24 -p tcp --dport 22 -j DROP` |
 |  | `iptables -A INPUT -i eth0 -j ACCEPT` |
+|  | `iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT` |
 | 禁止 192.168.1.0/24 到 10.1.1.0/24 的流量 | `iptables -A FORWARD -s 192.168.1.0/24 -d 10.1.1.0/24 -j DROP` |
 
 ### nat
