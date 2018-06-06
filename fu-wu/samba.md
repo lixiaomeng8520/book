@@ -6,7 +6,13 @@
 yum -y install samba
 ```
 
-#### 添加用户
+#### 查看用户
+
+```bash
+pdbedit -L
+```
+
+#### 添加用户，只能添加系统存在的用户
 
 ```bash
 smbpasswd -a root
