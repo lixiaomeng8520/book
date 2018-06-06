@@ -28,18 +28,18 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 
 | **描述** | **类型** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 系统服务 | Service |
-| 多个unit构成一个组 | Target |
-| 硬件设备 | Device |
-| 文件系统挂载点 | Mount |
-| 自动挂载点 | Automount |
-| 文件或路径 | Path |
-| 不是又systemd启动的外部进程 | Scope |
-| 进程组 | Slice |
-| systemd 快照 | Snapshot |
-| 进程间通信的socket | Socket |
-| swap文件 | Swap |
-| 定时器 | Timer |
+| 系统服务 | service |
+| 多个unit构成一个组 | target |
+| 硬件设备 | device |
+| 文件系统挂载点 | mount |
+| 自动挂载点 | automount |
+| 文件或路径 | path |
+| 不是又systemd启动的外部进程 | scope |
+| 进程组 | slice |
+| systemd 快照 | snapshot |
+| 进程间通信的socket | socket |
+| swap文件 | swap |
+| 定时器 | timer |
 
 ## unit管理
 
