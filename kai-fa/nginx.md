@@ -6,6 +6,7 @@
 * [简明 Nginx Location Url 配置笔记](https://www.jianshu.com/p/e154c2ef002f)
 * [FASTCGI\_PARAMS VERSUS FASTCGI.CONF – NGINX CONFIG HISTORY](https://blog.martinfjordvald.com/2013/04/nginx-config-history-fastcgi_params-versus-fastcgi-conf/)
 * [How to Install Nginx on CentOS 7](https://www.tecmint.com/install-nginx-on-centos-7/)
+* [header的安全配置指南](https://www.cnblogs.com/doseoer/p/5676297.html)
 
 ## location 规则
 
