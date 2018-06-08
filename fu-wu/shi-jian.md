@@ -29,3 +29,11 @@ server 3.cn.pool.ntp.org iburst
 systemctl restart chronyd
 ```
 
+## 时区设置
+
+```bash
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+
+
+
