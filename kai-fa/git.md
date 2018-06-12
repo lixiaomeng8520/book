@@ -6,7 +6,7 @@
 * [易百git教程](https://www.yiibai.com/git/)
 * [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
 * [代码回滚：git reset、git checkout和git revert区别和联系](https://www.cnblogs.com/houpeiyong/p/5890748.html)
-* [Git 工具 - 重置揭密](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86)
+* [Git 工具 - 重置揭密](https://git-scm.com/book/zh/v2/Git-工具-重置揭密)
 
 ## 2. 安装
 
@@ -60,7 +60,7 @@ Host github.com *.github.com
 
 ## 5. 配置
 
-`git config [--global|--system] -e`  打开对应配置文件进行编辑
+`git config [--global|--system] -e` 打开对应配置文件进行编辑
 
 ### 配置文件
 
@@ -101,7 +101,7 @@ Host github.com *.github.com
 
 ```text
 error: Your local changes to the following files would be overwritten by checkout:
-	log
+    log
 Please commit your changes or stash them before you switch branches.
 ```
 
