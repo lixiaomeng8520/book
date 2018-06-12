@@ -60,10 +60,10 @@ systemd 可以管理所有系统资源，不同的资源统称为 unit 。
 
 ## 配置文件
 
- `/etc/systemd/system/ -> /usr/lib/systemd/system/`
+`/etc/systemd/system/ -> /usr/lib/systemd/system/`
 
 | **描述** | **命令** |
 | --- | --- | --- |
-|  列出unit files | `systemctl list-unit-files --type=service` |
-|  列出单个unit files | `systemctl list-unit-files smb.service` |
+| 列出unit files | `systemctl list-unit-files --type=service` |
+| 列出单个unit files | `systemctl list-unit-files smb.service` |
 

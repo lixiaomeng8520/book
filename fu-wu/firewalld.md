@@ -16,15 +16,15 @@ Zone
 
 | **名称** | **描述** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  Drop Zone |  只出不进; 相当于iptables -j drop |
-|  Block Zone |  禁止进入, 通过icmp-host-prohibited拒绝, 只允许本机内建立的连接. |
-|  Public Zone |  允许特定的端口 |
-|  External Zone |  TODO: nat |
-|  DMZ Zone |  |
-|  Work Zone |  |
-|  Home Zone |  |
-|  Internal Zone |  |
-|  Trusted Zone |  |
+| Drop Zone | 只出不进; 相当于iptables -j drop |
+| Block Zone | 禁止进入, 通过icmp-host-prohibited拒绝, 只允许本机内建立的连接. |
+| Public Zone | 允许特定的端口 |
+| External Zone | TODO: nat |
+| DMZ Zone |  |
+| Work Zone |  |
+| Home Zone |  |
+| Internal Zone |  |
+| Trusted Zone |  |
 
 ## 命令
 
