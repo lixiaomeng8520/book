@@ -1,3 +1,5 @@
+# 第一个应用
+
 如果你想通过一个很简单的Slim应用学习到所有的相关知识，那么请阅读本章节。可以通过教程来构建简单应用，也可以根据需求调整每一个步骤。
 
 在开始之前：有一个骨架项目让你快速入门。
@@ -8,7 +10,7 @@
 
 首先为项目创建一个目录（这里叫做`project`，因为起名字真的很难）。我喜欢顶级目录没有代码，里面有一个源代码目录，源代码目录里创建一个项目根目录，所以目录结构是这样：
 
-```
+```text
 .
 ├── project
 │   └── src
@@ -19,7 +21,7 @@
 
 Composer是安装Slim框架最好的方式。如果还没有Composer，你可以参考[安装指南](https://getcomposer.org/download/)，在我的项目里，我把`composer.phar`下载到`src/`目录里，可以在本地使用它。所以我的第一个命令是这样的（现在在`src/`目录）：
 
-```
+```text
 php composer.phar require slim/slim
 ```
 
@@ -32,7 +34,7 @@ php composer.phar require slim/slim
 
 为了正确设置git排除，创建一个文件`src/.gitingore`，然后添加如下代码：
 
-```
+```text
 vendor/*
 ```
 
@@ -73,7 +75,33 @@ $app->run();
 
 这是我更喜欢的“快速启动”选项，因为它不依赖任何其他东西！在`src/public`目录里执行下面的命令：
 
-```
+```text
 php -S localhost:8080
 ```
+
+可以通过http://localhost:8080来访问应用（如果你本机已经使用了8080端口，会被警告。只需要换一个不同的端口即可，PHP并不关心具体绑定到哪里）。
+
+注意访问这个URL会提示“Page Not Found” - 但是这个错误提示来自Slim，所以这是正常的。尝试替换为Http://localhost:8080/hello/joebloggs :\)。
+
+### 使用Apache或Nginx来运行
+
+为了让它建立在一个标准LAMP栈，我们需要一些额外的东西：一些主机配置和一个重写规则。
+
+虚拟主机的配置应该很简单；我们不需要其他特殊的东西。复制默认存在的配置，然后设置你想如何访问项目的ServerName。比如可以这样：
+
+```text
+ServerName slimproject.test
+or for nginx:
+server_name slimproject.test
+```
+
+然后把DocumentRoot指向public/目录：
+
+```text
+DocumentRoot /home/lorna/projects/slim/project/src/public/
+or for nginx:
+root /home/lorna/projects/slim/project/src/public/
+```
+
+不要忘记重启服务！
 
