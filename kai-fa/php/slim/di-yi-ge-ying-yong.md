@@ -105,3 +105,26 @@ root /home/lorna/projects/slim/project/src/public/
 
 不要忘记重启服务！
 
+在src/public目录下还有一个.htaccess文件；它依赖于Apache的重写模块，可以简单的使所有的web请求转向index.php文件，这样Slim就可以为我们处理所有的路由。这是.htaccess内容：
+
+{% code-tabs %}
+{% code-tabs-item title=".htaccess" %}
+```text
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+nginx不使用.htaccess文件，所以你需要将下面代码添加到你的服务器配置的location块：
+
+```text
+if(!-e $request_filename){
+    rewrite ^(.*)$ /index.php break;
+}
+```
+
+注意：
+
