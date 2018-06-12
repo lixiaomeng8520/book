@@ -186,3 +186,29 @@ Composer可以处理类的自动加载。进一步了解，请访问[使用Compo
 
 ## 添加依赖
 
+大多数应用都有依赖，Slim使用基于Pimple的DIC。这个例子使用Monolog和PDO连接MySQL。
+
+依赖注入容器的思想是，你配置容器来加载应用需要的依赖，当应用需要他们的时候。一旦DIC创建/组装了这些依赖，它可以贮存他们，然后供以后需要的时候使用。
+
+想要获取容器，我们可以在创建$app之后，注册路由之前，添加如下代码：
+
+```php
+$container = $app->getContainer();
+```
+
+现在我们有了Slim\Container对象，我们可以向里面添加服务。
+
+### 使用Monolog
+
+如果你已经熟悉Monolog，它是一个优秀了PHP日志框架，所以这里我们使用它。首先，通过Composer获取Monolog库：
+
+```text
+php composer.phar require monolog/monolog
+```
+
+将依赖命名为logger：
+
+```text
+
+```
+
