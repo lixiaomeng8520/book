@@ -1,4 +1,2 @@
 # Upgrade Guide
 
-
-

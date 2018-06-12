@@ -1,6 +1,6 @@
 # BOOK
 
-## 关闭selinux的
+## 关闭selinux
 
 setenforece 0
 

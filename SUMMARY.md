@@ -26,6 +26,6 @@
       * [Deployment](kai-fa/php/slim/deployment.md)
 * [编辑器](bian-ji-qi/README.md)
   * [vim](bian-ji-qi/vim.md)
-  * [sublime](bian-ji-qi/sublime.md)
+  * [sublime](bian-ji-qi/untitled.md)
   * [vscode](bian-ji-qi/vscode.md)
 
