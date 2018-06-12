@@ -150,5 +150,39 @@ $config['db']['pass']   = 'password';
 $config['db']['dbname'] = 'exampleapp';
 ```
 
+第一行很重要！开启它可以在开发环境中获取更多错误信息。第二行允许web服务器设置Content-Length头，可以让Slim行为更加可预测。
 
+其他设置不是特定的keys/values，他们仅仅是我之后想要访问的一些数据。
+
+现在把他们传入Slim，我们需要修改我们创建Slim/App对象的地方：
+
+```php
+$app = new \Slim\App(['settings' => $config]);
+```
+
+我们可以稍后从应用里访问到所有添加到$config数组里的设置。
+
+## 为我们的类设置自动加载
+
+Composer可以处理类的自动加载。进一步了解，请访问[使用Composer管理自动加载规则](https://getcomposer.org/doc/04-schema.md#autoload)。
+
+我的设置很简单因为我只有很少的额外的类，他们在全局命名空间，文件在src/classes/目录里。所以为了自动加载他们，请在composer.json文件里添加autoload块：
+
+```javascript
+{
+    "require": {
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+        "robmorgan/phinx": "^0.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "classes/"
+        }
+    }
+}
+```
+
+## 添加依赖
 
