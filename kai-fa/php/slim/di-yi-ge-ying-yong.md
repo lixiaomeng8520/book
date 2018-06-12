@@ -79,7 +79,7 @@ $app->run();
 php -S localhost:8080
 ```
 
-可以通过http://localhost:8080来访问应用（如果你本机已经使用了8080端口，会被警告。只需要换一个不同的端口即可，PHP并不关心具体绑定到哪里）。
+可以通过[http://localhost:8080来访问应用（如果你本机已经使用了8080端口，会被警告。只需要换一个不同的端口即可，PHP并不关心具体绑定到哪里）。](http://localhost:8080来访问应用（如果你本机已经使用了8080端口，会被警告。只需要换一个不同的端口即可，PHP并不关心具体绑定到哪里）。)
 
 注意访问这个URL会提示“Page Not Found” - 但是这个错误提示来自Slim，所以这是正常的。尝试替换为Http://localhost:8080/hello/joebloggs :\)。
 
@@ -128,7 +128,7 @@ if(!-e $request_filename){
 
 注意：如果想入口文件是其他文件而不是index.php，你需要更改上面的配置。api.php经常作为入口文件，所以你的设置需要对应。这个例子假设你使用index.php。
 
-使用这个设置，那么在教程的其他例子里，请使用http://slimproject.test代替http://localhost:8080。同样会有警告：你会在http://slimproject.test看到错误页面，它是Slim的产生的。可以访问http://slimproject.test/hello/joebloggs。
+使用这个设置，那么在教程的其他例子里，请使用[http://slimproject.test代替http://localhost:8080。同样会有警告：你会在http://slimproject.test看到错误页面，它是Slim的产生的。可以访问http://slimproject.test/hello/joebloggs。](http://slimproject.test代替http://localhost:8080。同样会有警告：你会在http://slimproject.test看到错误页面，它是Slim的产生的。可以访问http://slimproject.test/hello/joebloggs。)
 
 ## 配置和自动加载
 
@@ -215,5 +215,27 @@ $container['logger'] = function($c) {
     $logger->pushHandler($file_handler);
     return $logger;
 };
+```
+
+我们向容器里添加了一个元素，它是一个匿名函数（传入的$c是container对象，所以你可以函数里访问其他的依赖）。当你第一访问这个依赖时，它会被调用；这里代码是对依赖的设置。下次我们想要访问同一个依赖时，直接使用第一次创建的对象。
+
+我的Monolog配置很简单；仅仅设置了应用记录所有的错误到logs/app.log文件里（记住，这个路径是相对于脚本文件的，比如index.php）。
+
+设置好了logger，我们可以在路由里这样使用它：
+
+```php
+$this->logger->addInfo('Something interesting happened');
+```
+
+记录日志是很好的习惯，所以我常建议这样做。它可以让你根据需要或多或少地添加debug日志，然后通过对每条信息使用相应的日志级别，你可以了解在每个时刻的详细信息。
+
+### 添加数据库连接
+
+对于PHP有很多的数据库类库，这里我们使用PDO - 它在PHP里作为标准，在每个项目里都可以用到，或者你可以通过调整下面的例子来使用自己的库。
+
+和添加Monolog到DIC里一样，我们也添加一个匿名函数来建立以来，这里叫做db：
+
+```text
+
 ```
 
