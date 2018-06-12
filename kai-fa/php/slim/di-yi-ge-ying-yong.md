@@ -126,5 +126,29 @@ if(!-e $request_filename){
 }
 ```
 
-注意：
+注意：如果想入口文件是其他文件而不是index.php，你需要更改上面的配置。api.php经常作为入口文件，所以你的设置需要对应。这个例子假设你使用index.php。
+
+使用这个设置，那么在教程的其他例子里，请使用http://slimproject.test代替http://localhost:8080。同样会有警告：你会在http://slimproject.test看到错误页面，它是Slim的产生的。可以访问http://slimproject.test/hello/joebloggs。
+
+## 配置和自动加载
+
+现在我们已经搭建好了框架，我们可以在应用本身获取到我们想要的一切。
+
+### 添加配置到应用
+
+初始示例应用使用Slim的默认配置，但是当我们创建它的时候，可以轻松的添加配置。添加配置有不同的方法，这里我创建了一个配置数组，然后当创建Slim的时候，告诉它去应用这些配置。
+
+首先定义配置：
+
+```php
+$config['displayErrorDetails'] = true;
+$config['addContentLengthHeader'] = false;
+
+$config['db']['host']   = 'localhost';
+$config['db']['user']   = 'user';
+$config['db']['pass']   = 'password';
+$config['db']['dbname'] = 'exampleapp';
+```
+
+
 
