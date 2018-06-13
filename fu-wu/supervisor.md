@@ -33,8 +33,45 @@
 
 * unix like
 * python &gt;= 2.4 &lt; 3
-* 
+
 ## 安装
+
+### 联网安装
+
+#### 使用Setuptools
+
+```text
+easy_install supervisor
+```
+
+#### 不使用Setuptools
+
+* 下载软件包
+* 解压软件包
+* 执行 `python setup.py install`
+
+### 离线安装
+
+### 安装发行版包
+
+```text
+yum install supervisor
+```
+
+### 通过pip安装
+
+```text
+pip install supervisor
+```
+
+### 创建配置文件
+
+```text
+echo_supervisord_conf > /etc/supervisord.conf
+
+echo supervisord_conf > supervisord.conf
+supervisord -c supervisord.conf
+```
 
 ## 运行
 
