@@ -5,6 +5,14 @@
 1. [linux命令大全](http://www.runoob.com/linux/linux-command-manual.html)
 2. [linux系统排查](https://www.cnblogs.com/Security-Darren/p/4685629.html)
 
+## 2&gt;&1
+
+希望将标准错误和标准输出都重定向到一个文件中，那么不要分别重定向，因为会打开文件两次，下面是将标准错误重定向到标准输出，再由标准输出重定向到文件。
+
+```text
+command > a.log 2>&1
+```
+
 ## nmcli
 
 | 描述 | 命令 |
