@@ -13,7 +13,7 @@
   * [firewalld](fu-wu/firewalld.md)
   * [iptables](fu-wu/iptables.md)
   * [时间](fu-wu/shi-jian.md)
-  * [Supervisor](fu-wu/supervisor.md)
+  * [supervisor](fu-wu/supervisor.md)
 * [开发](kai-fa/README.md)
   * [git](kai-fa/git.md)
   * [docker](kai-fa/docker.md)

@@ -72,3 +72,10 @@ netfilter通过以下方式对数据包进行分类：
 链：PREROUTING、INPUT、FORWARD、OUTPUT、POSTROUTING
 {% endhint %}
 
+## NAT步骤
+
+* 当前主机默认路由
+* 开启路由转发
+* filter表forward链打开
+* 设置nat规则
+
