@@ -271,3 +271,7 @@ $app->get('/tickets', function (Request $request, Response $response) {
 });
 ```
 
+$app-&gt;get\(\)表明这个路由只接受GET请求；还有一个$app-&gt;post只处理POST请求。还有一些方法代表其他动作 - 还有如果在一些场景里有多个动作用到了特定的路由的相同代码，可以使用map\(\)方法。
+
+Slim路由按声明顺序匹配，所以如果
+
