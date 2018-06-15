@@ -273,5 +273,5 @@ $app->get('/tickets', function (Request $request, Response $response) {
 
 $app-&gt;get\(\)表明这个路由只接受GET请求；还有一个$app-&gt;post只处理POST请求。还有一些方法代表其他动作 - 还有如果在一些场景里有多个动作用到了特定的路由的相同代码，可以使用map\(\)方法。
 
-Slim路由按声明顺序匹配，所以如果
+Slim路由按声明顺序匹配，所以如果有路由和其他路由重合了，那么需要把特定的路由放在第一个。如果有错误Slim会抛出异常，比如在这个例子里，同时有/ticket/new和/ticket{id}，那么他们需要按顺序声明，否则路由会把“new”当做ID！
 
