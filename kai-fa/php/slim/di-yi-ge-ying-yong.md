@@ -261,6 +261,13 @@ $mapper = new TicketMapper($this->db);
 作为第一个例子，下面是创建一个GET请求到/tickets，它列出了我的bug追踪示例里的票据。它仅仅显示变量因为我们还没有添加视图：
 
 ```php
+$app->get('/tickets', function (Request $request, Response $response) {
+    $this->logger->addInfo("Ticket list");
+    $mapper = new TicketMapper($this->db);
+    $tickets = $mapper->getTickets();
 
+    $response->getBody()->write(var_export($tickets, true));
+    return $response;
+});
 ```
 
