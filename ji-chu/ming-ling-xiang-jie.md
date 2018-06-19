@@ -15,6 +15,8 @@ command > a.log 2>&1
 
 ## nmcli
 
+nmcli - command-line tool for controlling NetworkManager
+
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 查看所有设备 | `nmcli d` |
@@ -82,12 +84,18 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 
 ## tar
 
+压缩文件时，会保留指定文件的路径。
+
+指定文件是相对于-C参数的，如果没有，则是当前目录。
+
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- |
-| 解压包 | `tar -zxvf xx.tar.gz -C dir` |
+| 解压到当前文件夹 | `tar -zxvf xx.tar.gz` |
+| 解压到指定文件夹 | `tar -zxvf xx.tar.gz -C dir` |
 | 列出包文件 | `tar -ztvf xx.tar.gz` |
-| 压缩文件压缩 | `tar -zcvf xx.tar.gz a.txt b.txt c.txt` |
-| 指定目录下的文件压缩 | `tar -zcvf xx.tar.gz -C /data .` |
+| 指定文件（夹）压缩 | `tar -zcvf xx.tar.gz a.txt b/` |
+| 全部文件压缩 | `tar -zcvf xx.tar.gz .` |
+| 指定目录下的文件压缩 | `tar -zcvf xx.tar.gz -C /data b/ a.txt` |
 
 ## /etc/passwd 文件
 
