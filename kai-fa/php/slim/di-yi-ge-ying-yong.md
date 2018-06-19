@@ -290,6 +290,13 @@ Request和Response的强调说明了Slim 3是基于HTTP Messaging的PSR-7标准�
 有时候，URL里包含了我们想要在应用里使用的变量。在我的bug追踪实例中，我想让URL/ticket/42对应票据 - Slim会很容易的解析出“42”，让它很方便使用：
 
 ```php
+$app->get('/ticket/{id}', function (Request $request, Response $response, $args) {
+    $ticket_id = (int)$args['id'];
+    $mapper = new TicketMapper($this->db);
+    $ticket = $mapper->getTicketById($ticket_id);
 
+    $response->getBody()->write(var_export($ticket, true));
+    return $response;
+});
 ```
 
