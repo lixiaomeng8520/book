@@ -97,6 +97,29 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | 全部文件压缩 | `tar -zcvf xx.tar.gz .` |
 | 指定目录下的文件压缩 | `tar -zcvf xx.tar.gz -C /data b/ a.txt` |
 
+## wc
+
+ 利用wc指令我们可以计算文件的Byte数、字数、或是列数，若不指定文件名称、或是所给予的文件名为"-"，则wc指令会从标准输入设备读取数据。
+
+| 描述 | 命令 |
+| --- | --- | --- | --- | --- |
+| 统计文件信息 | `wc file` （行数，单词数，字节数） |
+| 显示file文件行数 | `wc -l file` |
+| 显示文件单词数 | `wc -w file` |
+| 显示文件byte数 | `wc -c file` |
+
+## sed
+
+ Linux sed命令是利用script来处理文本文件。
+
+sed可依照script的指令，来处理、编辑文本文件。
+
+Sed主要用来自动编辑一个或多个文件；简化对文件的反复操作；编写转换程序等。
+
+| 描述 | 命令 |
+| --- | --- |
+| file文件全局替换 | `sed -i 's/原字符串/替换字符串/g' file` |
+
 ## /etc/passwd 文件
 
 /etc/passwd 文件存放的是用户的信息，由6个冒号组成的7个信息
