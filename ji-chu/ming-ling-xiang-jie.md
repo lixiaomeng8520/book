@@ -123,6 +123,18 @@ Sed主要用来自动编辑一个或多个文件；简化对文件的反复操�
 | --- | --- |
 | file文件全局替换 | `sed -i 's/原字符串/替换字符串/g' file` |
 
+## scp
+
+目标是目录的，则是将源文件（夹）复制到到该目录里。
+
+目标不存在的，则源是目录，则新建目录；源是文件，则新建文件。
+
+| 描述 | 命令 |
+| --- | --- | --- | --- |
+| 复制文件到目录 | `scp user@host:/remotefile /localdir/` |
+| 复制文件到文件 | `scp user@host:/remotefile /localfile` |
+| 复制目录 | `scp -r user@host:/remotedir/ /localdir/` |
+
 ## /etc/passwd 文件
 
 /etc/passwd 文件存放的是用户的信息，由6个冒号组成的7个信息
