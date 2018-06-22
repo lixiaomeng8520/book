@@ -26,6 +26,7 @@
       * [Web服务器](kai-fa/php/slim/web-fu-wu-qi.md)
       * [部署](kai-fa/php/slim/bu-shu.md)
       * [第一个应用](kai-fa/php/slim/di-yi-ge-ying-yong.md)
+    * [Pimple](kai-fa/php/pimple.md)
 * [编辑器](bian-ji-qi/README.md)
   * [vim](bian-ji-qi/vim.md)
   * [sublime](bian-ji-qi/sublime.md)
