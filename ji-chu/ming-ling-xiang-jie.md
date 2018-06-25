@@ -72,11 +72,12 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | 拷贝公钥 | `ssh-copy-id root@master` |
 |  | `ssh-copy-id -i ~/.ssh/id_rsa.pub root@master` |
 
-## rpm
+## rpm 和 yum
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- | --- |
 | 查看一个包的依赖 | `yum deplist php71u-cli` |
+| 一个文件属于哪个包 | `yum provides [nslookup|/etc/nginx/nginx.conf]` |
 | 查询php71u是否安装 | `rpm -q php71u-fpm` |
 | 查看php71u包信息 | `rpm -qi php71u-fpm` |
 | 列出php71u包含的文件 | `rpm -ql php71u-fpm` |
@@ -134,6 +135,15 @@ Sed主要用来自动编辑一个或多个文件；简化对文件的反复操�
 | 复制文件到目录 | `scp user@host:/remotefile /localdir/` |
 | 复制文件到文件 | `scp user@host:/remotefile /localfile` |
 | 复制目录 | `scp -r user@host:/remotedir/ /localdir/` |
+
+## nslookup
+
+ nslookup命令用于**查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。**
+
+| 描述 | 命令 |
+| --- | --- | --- |
+| 用默认dns服务器查询DNS | nslookup baidu.com |
+| 用指定dns服务器查询DNS | nslookup baidu.com 114.114.114.114 |
 
 ## /etc/passwd 文件
 
