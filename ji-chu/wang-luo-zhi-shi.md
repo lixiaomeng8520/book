@@ -55,3 +55,11 @@ echo 1 > /proc/sys/net/ipv4/ip_forward # 开启路由转发
 1. 不能分配和当前网段不一致的网段.
 2. 如果要分配其他网段, 可以添加一块网卡, 或者在当前网卡上添加一个其他网段IP.
 
+## 获取公网IP
+
+```bash
+curl icanhazip.com
+```
+
+
+
