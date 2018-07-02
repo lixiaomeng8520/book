@@ -75,6 +75,22 @@ supervisord -c supervisord.conf
 
 ## 运行
 
+### 信号
+
+supervisord运行时，可以向其发送信号，来执行特定动作。
+
+你可以向supervisord的进程ID发送这些信号。进程ID可以在配置文件的`[supervisord]`块的`pidfile`参数找到。
+
+#### 信号控制
+
+| 信号 | 动作 |
+| --- | --- | --- | --- | --- | --- |
+| SIGTERM | supervisord和所有子进程都会停止。 |
+| SIGINT | supervisord和所有子进程都会停止。 |
+| SIGQUIT | supervisord和所有子进程都会停止。 |
+| SIGHUP | supervisord会停止所有进程，重载配置，最后重启所有进程。 |
+| SIGUSR2 | supervisord会关闭，重新打开主活动日志和所有子进程日志。 |
+
 ## 配置文件
 
 ## 子进程
