@@ -300,3 +300,5 @@ $app->get('/ticket/{id}', function (Request $request, Response $response, $args)
 });
 ```
 
+请看路由定义的地方：/ticket/{id}。当
+
