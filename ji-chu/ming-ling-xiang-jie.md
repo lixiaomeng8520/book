@@ -5,16 +5,6 @@
 1. [linux命令大全](http://www.runoob.com/linux/linux-command-manual.html)
 2. [linux系统排查](https://www.cnblogs.com/Security-Darren/p/4685629.html)
 
-## 文件所属信息
-
-移动文件会连同文件所属信息一起移动
-
-| 原系统所属 | 新系统所属 |
-| --- | --- | --- | --- |
-| jenkins.jenkins | 1000:1000（没有jenkins用户，没有id为1000用户） |
-|  | jenkins:jenkins（有jenkins用户） |
-|  | lxm:lxm（无jenkins用户，但有id为1000的lxm用户） |
-
 ## 2&gt;&1
 
 希望将标准错误和标准输出都重定向到一个文件中，那么不要分别重定向，因为会打开文件两次，下面是将标准错误重定向到标准输出，再由标准输出重定向到文件。
@@ -62,8 +52,8 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 
 | 描述 | 命令 |
 | --- | --- | --- |
-| 从windows receive接收文件 | rz |
-| 发送文件a.txt到windows | sz a.txt |
+| 从windows receive接收文件 | `rz` |
+| 发送文件a.txt到windows | `sz a.txt` |
 
 ## curl
 
@@ -82,12 +72,11 @@ rz, sz便是Linux/Unix同Windows进行ZModem文件传输的命令行工具。
 | 拷贝公钥 | `ssh-copy-id root@master` |
 |  | `ssh-copy-id -i ~/.ssh/id_rsa.pub root@master` |
 
-## rpm 和 yum
+## rpm
 
 | 描述 | 命令 |
 | --- | --- | --- | --- | --- | --- |
 | 查看一个包的依赖 | `yum deplist php71u-cli` |
-| 一个文件属于哪个包 | `yum provides [nslookup|/etc/nginx/nginx.conf]` |
 | 查询php71u是否安装 | `rpm -q php71u-fpm` |
 | 查看php71u包信息 | `rpm -qi php71u-fpm` |
 | 列出php71u包含的文件 | `rpm -ql php71u-fpm` |
@@ -133,27 +122,6 @@ Sed主要用来自动编辑一个或多个文件；简化对文件的反复操�
 | 描述 | 命令 |
 | --- | --- |
 | file文件全局替换 | `sed -i 's/原字符串/替换字符串/g' file` |
-
-## scp
-
-目标是目录的，则是将源文件（夹）复制到到该目录里。
-
-目标不存在的，则源是目录，则新建目录；源是文件，则新建文件。
-
-| 描述 | 命令 |
-| --- | --- | --- | --- |
-| 复制文件到目录 | `scp user@host:/remotefile /localdir/` |
-| 复制文件到文件 | `scp user@host:/remotefile /localfile` |
-| 复制目录 | `scp -r user@host:/remotedir/ /localdir/` |
-
-## nslookup
-
- nslookup命令用于**查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。**
-
-| 描述 | 命令 |
-| --- | --- | --- |
-| 用默认dns服务器查询DNS | nslookup baidu.com |
-| 用指定dns服务器查询DNS | nslookup baidu.com 114.114.114.114 |
 
 ## /etc/passwd 文件
 
