@@ -28,6 +28,7 @@
       * [第一个应用](kai-fa/php/slim/di-yi-ge-ying-yong.md)
     * [Pimple](kai-fa/php/pimple.md)
     * [基础](kai-fa/php/ji-chu.md)
+    * [PHP资源](kai-fa/php/php-zi-yuan.md)
 * [编辑器](bian-ji-qi/README.md)
   * [vim](bian-ji-qi/vim.md)
   * [sublime](bian-ji-qi/sublime.md)
