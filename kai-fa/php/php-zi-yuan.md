@@ -4,5 +4,11 @@
 | --- | --- |
 | [hassankhan/config](https://packagist.org/packages/hassankhan/config) | 配置文件加载 |
 
+| 工具 | 描述 |
+| --- | --- | --- | --- |
+| [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit) | 单元测试 |
+| [scrutinizer/ocular](https://packagist.org/packages/scrutinizer/ocular) |  |
+| [squizlabs/php\_codesniffer](https://packagist.org/packages/squizlabs/php_codesniffer) | 检测修正代码风格 |
+
 
 
