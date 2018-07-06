@@ -75,23 +75,13 @@ supervisord -c supervisord.conf
 
 ## 运行
 
-### 信号
-
-supervisord运行时，可以向其发送信号，来执行特定动作。
-
-你可以向supervisord的进程ID发送这些信号。进程ID可以在配置文件的`[supervisord]`块的`pidfile`参数找到。
-
-#### 信号控制
-
-| 信号 | 动作 |
-| --- | --- | --- | --- | --- | --- |
-| SIGTERM | supervisord和所有子进程都会停止。 |
-| SIGINT | supervisord和所有子进程都会停止。 |
-| SIGQUIT | supervisord和所有子进程都会停止。 |
-| SIGHUP | supervisord会停止所有进程，重载配置，最后重启所有进程。 |
-| SIGUSR2 | supervisord会关闭，重新打开主活动日志和所有子进程日志。 |
-
 ## 配置文件
+
+### \[program:x\]
+
+#### command
+
+程序开始时，这个命令会被运行。这个命令可以是相对路径，也可以是绝对路径。如果是相对的，会在`supervisord`的环境变量`$PATH`里寻找这个命令。程序可以接收参数，比如`/path/to/program foo bar`。命令行可以使用双引号来处理包含空格的参数，比如`/path/to/program/name -p "foo bar"`。注意`command`可能会包含Python表达式，比如 `/path/to/programname --port=80%(process_num)02d`会在运行时转化成 `/path/to/programname --port=8000`。表达式里可以用这些变量：`group_name`，`host_node_name`，`process_num`，`program_name`，`here`（supervisord配置文件所在目录）和所有以`ENV_`开头的supervisord环境变量。受控的程序自身不会成为守护进程，因为supervisord假设它来负责子进程的后台化。
 
 ## 子进程
 
