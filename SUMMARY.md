@@ -29,6 +29,7 @@
     * [Pimple](kai-fa/php/pimple.md)
     * [基础](kai-fa/php/ji-chu.md)
     * [PHP资源](kai-fa/php/php-zi-yuan.md)
+    * [PSR](kai-fa/php/psr.md)
   * [snowflake](kai-fa/snowflake.md)
 * [编辑器](bian-ji-qi/README.md)
   * [vim](bian-ji-qi/vim.md)
