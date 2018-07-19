@@ -20,6 +20,26 @@
 }
 ```
 
+## swarm
+
+routing mess网络，访问任意一个节点，会自动分发到某一个task上，即使该节点没有task。
+
+| 描述 | 命令 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 初始化swarm，并指定manager ip | `docker swarm init --advertise-addr 192.168.56.20` |
+| 获取worker的join-token | `docker swarm join-token worker` |
+| 加入集群 | `docker swarm join --token aaa 192.168.56.20` |
+| 查看节点 | `docker node ls` |
+| 部署一个服务 | `docker service create --replicas 1 --name helloworld alpine ping docker.com` |
+| 查看服务 | `docker service ls` |
+| 查看服务详情 | `docker service inspect --pretty helloworld` |
+| 查看哪些节点在运行服务 | `docker service ps helloworld` |
+| 伸缩服务 | `docker service scale hellowrld=5` |
+| 删除服务 | `docker service rm helloworld` |
+| 升级服务 | `docker service update --image redis:3.0.7 redis` |
+| 剔除一个节点 | `docker node update --availability drain worker1` |
+| 激活一个节点 | `docker node update --availability active worker1` |
+
 ## 网络
 
 | 描述 | 命令 |
