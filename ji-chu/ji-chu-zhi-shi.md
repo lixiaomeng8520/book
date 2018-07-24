@@ -1,5 +1,9 @@
 # 基础知识
 
+## 不错网站
+
+* [Easy file sharing from the command line](https://transfer.sh/)
+
 ## 中国镜像
 
 ### 源站

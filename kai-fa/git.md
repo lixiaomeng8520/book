@@ -7,6 +7,7 @@
 * [git的reset和checkout的区别](https://segmentfault.com/a/1190000006185954)
 * [代码回滚：git reset、git checkout和git revert区别和联系](https://www.cnblogs.com/houpeiyong/p/5890748.html)
 * [Git 工具 - 重置揭密](https://git-scm.com/book/zh/v2/Git-工具-重置揭密)
+* [gitlab升级](https://gitlab.com/gitlab-org/gitlab-ce/tree/master/doc/update)
 
 ## 2. 安装
 
