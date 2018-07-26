@@ -3,6 +3,7 @@
 * [http://auraphp.com/](http://auraphp.com/)
 * [Testing Your Web Applications for Cross-Site Scripting Vulnerabilities](https://technet.microsoft.com/en-us/library/cc512662.aspx)
 * [PSR-7 Objects Are Not Immutable](http://andrew.carterlunn.co.uk/programming/2016/05/22/psr-7-is-not-immutable.html)
+* [Composer Packagist Mirror](https://packagist.laravel-china.org/)
 
 | 项目 | 描述 |
 | --- | --- |
