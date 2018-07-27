@@ -142,13 +142,16 @@ Please commit your changes or stash them before you switch branches.
 ### 7.3 push
 
 > 推送原则上要同名
+>
+> 使用 -u 参数，会在配置文件中增加 \[branch\] 块
 
 | **描述** | **命令** |
 | --- | --- | --- | --- | --- | --- |
 | 完整形式 | `git push server local_branch:remote_branch` |
 | 推送到同名分支，不存在则新建 | `git push server local_branch` |
-| 当前分支要和**跟踪分支**同名 | `git push server` |
-| 当前分支要和**跟踪分支**同名 | `git push` |
+| 跟踪同名分支，不存在则新建 | `git push -u server local_branch` |
+| 当前分支要和**跟踪分支**同名（之前已-u） | `git push server` |
+| 当前分支要和**跟踪分支**同名（之前已-u） | `git push` |
 | 删除远程分支 | `git push server :remote_branch` |
 
 ### 7.4 对比
@@ -157,4 +160,10 @@ Please commit your changes or stash them before you switch branches.
 | --- | --- | --- |
 | 对比工作区和暂存区 | `git diff` |
 | 对比暂存区和HEAD | `git diff --cached` |
+
+### 7.5 remote
+
+| 描述 | 命令 |
+| --- | --- |
+| 添加名为origin的远程服务器 | `git remote add origin gitpath` |
 
