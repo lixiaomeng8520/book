@@ -1,5 +1,13 @@
 # 基础
 
+## 参考
+
+* [PHP 7 错误处理](http://php.net/manual/zh/language.errors.php7.php)
+
+## Error 和 Exception
+
+php7以后，Error 和 Exception 都继承自 Throwable， 所以都可以被捕获。
+
 ## 重载
 
 PHP所提供的"重载"（overloading）是指动态地"创建"类属性和方法。我们是通过魔术方法（magic methods）来实现的。
