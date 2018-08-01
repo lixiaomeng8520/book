@@ -14,6 +14,14 @@
 * [Docker 服务 TLS 证书全自动生成](https://segmentfault.com/a/1190000012510820)
 * [Docker swarm remote volumes, best practices](https://www.reddit.com/r/docker/comments/7p069n/docker_swarm_remote_volumes_best_practice)
 
+## 杂项
+
+查看docker daemon日志
+
+```bash
+journalctl -f -u docker.service
+```
+
 ## 国内源
 
 ```javascript
